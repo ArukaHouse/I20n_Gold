@@ -41,13 +41,22 @@
         <a href="https://www.instagram.com/I20n_Gold" target="_blank">@I20n_Gold</a> | 
         <a href="https://www.tiktok.com/@I20n_Gold" target="_blank">@I20n_Gold</a>
     </p>
+
+    <p>You are the <span id="clickNumber"></span> to be jocked!</p>
+
     <button class="button" onclick="goBack()">Retour à la boutique</button>
 
     <script>
+        // Récupérer le nombre de clics stocké
+        let clickCount = localStorage.getItem('clickCount');
+        
+        // Afficher le message avec le nombre de clics
+        document.getElementById('clickNumber').textContent = clickCount;
+
         // Fonction pour revenir à la première page
         function goBack() {
             window.location.href = 'index.html';
         }
     </script>
 </body>
-</html>
+</html>/html>
