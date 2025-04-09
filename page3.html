@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Well Done!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #ffd700;
+        }
+        .button {
+            background-color: #ffd700;
+            padding: 15px 25px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .social-links {
+            margin-top: 30px;
+            font-size: 1.2em;
+        }
+        .social-links a {
+            color: #ffd700;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Well done my friend!</h1>
+    <p>You just clicked on this joke ahah. Thanks for your support, I love you and see you soon.</p>
+    <p class="social-links">
+        Follow me on Instagram and Tiktok: 
+        <a href="https://www.instagram.com/I20n_Gold" target="_blank">@I20n_Gold</a> | 
+        <a href="https://www.tiktok.com/@I20n_Gold" target="_blank">@I20n_Gold</a>
+    </p>
+
+    <p>You are the <span id="clickNumber"></span> to be jocked!</p>
+
+    <button class="button" onclick="goBack()">Retour à la boutique</button>
+
+    <script>
+        // Récupérer le nombre de clics stocké
+        let clickCount = localStorage.getItem('clickCount');
+        
+        // Afficher le message avec le nombre de clics
+        document.getElementById('clickNumber').textContent = clickCount;
+
+        // Fonction pour revenir à la première page
+        function goBack() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
