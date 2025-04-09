@@ -81,9 +81,19 @@
         </ul>
     </div>
     <div class="price">Seulement 19,99 CHF</div>
-    <a href="page3.html" class="buy-button">Acheter maintenant</a>
+<a href="page2.html" class="buy-button" onclick="incrementClick()">Acheter maintenant</a>
     <footer>
         www.i20ngold.com | Produit fictif créé par un passionné. #NFAMILY #i20NGoldPack
     </footer>
+    <script>
+    function incrementClick() {
+        // Récupérer le nombre actuel de clics ou initialiser à 0 si c'est le premier
+        let clickCount = localStorage.getItem('clickCount') || 0;
+        clickCount++;
+        
+        // Sauvegarder le nouveau nombre de clics
+        localStorage.setItem('clickCount', clickCount);
+    }
+</script>
 </body>
 </html>
